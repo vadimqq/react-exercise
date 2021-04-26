@@ -37,8 +37,14 @@ function App() {
     <form>
       <Name name={name} onNameChange={event => setName(event.target.value)} />
       
-      <FavoriteAnimal animal={animal}/>
-      <Display name={name} animal={animal}/>
+      <FavoriteAnimal
+        animal={animal}
+        onAnimalChange={event => setAnimal(event.target.value)}
+      />
+      <Display
+        name={name}
+        animal={animal}
+      />
     </form>
   )
 }
